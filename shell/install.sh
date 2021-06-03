@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install openssl libtool autoconf automake uuid-dev build-essential gcc g++ software-properties-common unzip make git libcap2-bin -y
 
 ### Install Golang
-sudo add-apt-repository ppa:longsleep/golang-backports
+sudo add-apt-repository ppa:longsleep/golang-backports -y
 sudo apt-get update
 sudo apt-get install golang-go -y
 
