@@ -22,7 +22,7 @@ sudo apt-get install golang-go -y
 
 ### Setup TideBit Chain
 mkdir ~/workspace
-sudo mkdir ~/TideBit-Chaindata
+mkdir ~/TideBit-Chaindata
 cd ~/workspace
 git clone https://github.com/BOLT-Protocol/TideBit-Chain
 cd TideBit-Chain
