@@ -1,0 +1,28 @@
+#!/bin/bash
+
+###
+### Prepare Environment ###
+###
+
+### Setup Swap ###
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo "/swapfile none swap sw 0 0" | sudo tee -a /etc/fstab
+
+### Install Library ###
+sudo apt-get update
+sudo apt-get install openssl libtool autoconf automake uuid-dev build-essential gcc g++ software-properties-common unzip make git libcap2-bin -y
+
+### Install Golang
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt-get update
+sudo apt-get install golang-go
+
+### Setup TideBit Chain
+git clone https://github.com/BOLT-Protocol/TideBit-Chain
+cd TideBit-Chain
+make all
+sudo ln -s ./build/bin/geth /usr/local/bin/
+sudo ln -s ./build/bin/puppeth /usr/local/bin/
