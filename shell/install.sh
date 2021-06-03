@@ -29,5 +29,5 @@ cd TideBit-Chain
 make all
 sudo ln -s ~/workspace/TideBit-Chain/build/bin/geth /usr/local/bin/
 sudo ln -s ~/workspace/TideBit-Chain/build/bin/puppeth /usr/local/bin/
-geth init genesis.json --datadir ~/TideBit-Chaindata
+geth init ~/workspace/TideBit-Chain/genesis.json --datadir ~/TideBit-Chaindata
 geth --datadir ~/TideBit-Chaindata --rpc --http --http.addr 0.0.0.0 --http.api debug,net,eth,shh,web3,txpool --ws --ws.addr 0.0.0.0 --ws.origins "*" --ws.port 8545 --ws.api eth,net,web3,network,debug,txpool --gcmode=archive
