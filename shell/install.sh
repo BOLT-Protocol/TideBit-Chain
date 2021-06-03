@@ -30,5 +30,4 @@ make all
 sudo ln -s ~/workspace/TideBit-Chain/build/bin/geth /usr/local/bin/
 sudo ln -s ~/workspace/TideBit-Chain/build/bin/puppeth /usr/local/bin/
 geth init ~/workspace/TideBit-Chain/genesis.json --datadir ~/TideBit-Chaindata
-geth --bootnodes enode://049574c863b614e51b28ecba8e9088d414b57d2baba4b278faeefb5dba45d1a1d2269885bae42f7d8a3bd088bce59f21e6df2308b472279134b8902af44e8a9d@3.237.19.51:30303 --datadir ~/TideBit-Chaindata
-screen -d -m geth --datadir ~/TideBit-Chaindata --rpc --http --http.addr 0.0.0.0 --http.api debug,net,eth,shh,web3,txpool --ws --ws.addr 0.0.0.0 --ws.origins "*" --ws.port 8545 --ws.api eth,net,web3,network,debug,txpool --gcmode=archive
+screen -d -m geth --bootnodes enode://049574c863b614e51b28ecba8e9088d414b57d2baba4b278faeefb5dba45d1a1d2269885bae42f7d8a3bd088bce59f21e6df2308b472279134b8902af44e8a9d@3.237.19.51:30303 --datadir ~/TideBit-Chaindata --rpc --http --http.addr 0.0.0.0 --http.api debug,net,eth,shh,web3,txpool --ws --ws.addr 0.0.0.0 --ws.origins "*" --ws.port 8545 --ws.api eth,net,web3,network,debug,txpool --gcmode=archive
